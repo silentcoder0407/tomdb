@@ -8,10 +8,11 @@ global $g_logo;
 global $g_date_time;
 global $results_per_page;
 global $g_table;
+global $g_earn;
 
 
-$g_gtitle = "Movie 101";
-$g_title = " | Movie 101";
+$g_gtitle = "TOMDB";
+$g_title = " | ".$g_gtitle;
 $g_tagline = "Freedom to watch!";
 $g_logo = "img/logo.png";
 $g_date_time = date("Y-m-d h:i:s");

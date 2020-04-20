@@ -24,14 +24,17 @@ include ("global_variables.php");
 		<div class="dropdown">
 		<button class="dropbtn">Category</button>
 			<div class="dropdown-content">
+				<a href="genre.php?genre=action">Action</a>
 				<a href="genre.php?genre=horror">Horror</a>
 				<a href="genre.php?genre=drama">Drama</a>
 				<a href="genre.php?genre=scifi">Sci-Fi</a>
+				<a href="genre.php?genre=adventure">Adventure</a>
+				<a href="genre.php?genre=comedy">Comedy</a>
 			</div>
 		</div>
 
 		<div class="dropdown">
-			<a href="request.php" class="dropbtn">Request</a>
+			<a href="contactus.php" class="dropbtn">Contact Us</a>
 		</div>
 
 		<div class="dropdown">

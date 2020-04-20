@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="style.css">
-<p style="text-align: center;"><sub>&copy;&nbsp;<?php echo date("Y") ." ". $g_gtitle;?>. All rights reserved.</sub><br /><br>
+<p style="text-align: center;"><sub>&copy;&nbsp;<?php echo date("Y") ." ". $g_gtitle;?> by ALREJJ Group of Companies</sub><br /><br>
 </p>
 
 <!--to top beg-->

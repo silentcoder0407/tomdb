@@ -13,12 +13,13 @@ $genre= $_POST['genre'];
 $casts = $_POST['casts'];
 $descri = $_POST['descri'];
 $download_link = $_POST['download_link'];
+$notes = $_POST['notes'];
+
 
 if(isset($_POST['submit'])){
-  $sql = mysqli_query($conn,"INSERT INTO $g_table (url, trailer, img, title, release_yr, rating, genre, casts, descri, download_link) VALUES('$url', '$trailer', '$img', '$title', '$release_yr', '$rating', '$genre', '$casts', '$descri', '$download_link')");
+  $sql = mysqli_query($conn,"INSERT INTO $g_table (url, trailer, img, title, release_yr, rating, genre, casts, descri, download_link, notes) VALUES('$url', '$trailer', '$img', '$title', '$release_yr', '$rating', '$genre', '$casts', '$descri', '$download_link', '$notes')");
 }
 
-echo $g_table;
 ?>
 <title>New <?php echo $g_title;?></title>
 
@@ -33,6 +34,7 @@ echo $g_table;
     Casts:&nbsp;<input type="text" name="casts" required><br>
     Description:&nbsp;<input type="text" name="descri" required><br>
     Download Link:&nbsp;<input type="text" name="download_link" required><br>
+    Notes:&nbsp;<input type="text" name="notes" required><br>
     <input type="submit" value="Submit" name="submit">
   </form>
 </div>
