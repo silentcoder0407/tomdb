@@ -1,6 +1,7 @@
 <?php
 include("global_variables.php");
 include("nav.php");
+include("headers.php");
 
 
 ?>
@@ -8,7 +9,8 @@ include("nav.php");
 <title>Disclaimer<?php echo $g_title; ?></title>
 
 
-<div class="about">
+<div class="container bg-secondary text-white">
+<h1>Disclaimer</h1>
 <center><img class="loginlogo" src="<?php echo $g_logo;?>"/></center><br>
 <b><center><div class=""><small><font color="orange"><?php echo $g_gtitle;?></font></small></div></center></b><br>
 <p>tomdb is an online service provider as defined in the Digital Millennium Copyright Act. We provide legal copyright owners with the ability to self-publish on the Internet by uploading, storing and displaying various types of media. We do not actively monitor, screen or otherwise review the media which is uploaded to our servers by users of the service.</p>

@@ -1,25 +1,15 @@
-<link rel="stylesheet" type="text/css" href="style.css">
-<p style="text-align: center;"><sub>&copy;&nbsp;<?php echo date("Y") ." ". $g_gtitle;?> by ALREJJ Group of Companies</sub><br /><br>
-</p>
+<?php 
+include("global_variables.php");
+include("headers.php");
+?>
+<div class="container">
+<footer class="page-footer font-small blue">
+<div class="row">
+  <div class="col footer-copyright text-left py-3"><small><p>Disclaimer: This site doesn't store any videos on it's server. All videos are provided by third-parties.</small></p></div>
+  <div class="col footer-copyright text-right py-3">&copy;&nbsp;<?php echo date("Y") ." ". $g_gtitle;?></div>
+  </div>
+ </footer>
+</div>
 
-<!--to top beg-->
-<button onclick="topFunction()" id="myBtn" class="myBtn" title="Go to top" >Top</button>
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
-<!--to top end-->

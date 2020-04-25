@@ -3,14 +3,18 @@ include ("nav.php");
 include ("global_variables.php");
 ?>
 <title>Request<?php echo $g_title; ?></title>
-<div class="form">
-  <div class="shadow2">
+<div class="container bg-secondary text-white pt-3 pb-3">
+ <h1>Contact Us</h1>
     <form  method="POST" action="https://formspree.io/request@driekoningen.gq">
-      Email:<br>
-      <input class="logintext" type="email" name="email" placeholder="Your email"><br><br>
-      Message: <br>
-      <textarea class="logintext" name="message" placeholder="Your message..."></textarea><br><br>
-      <button class="loginbtn2" type="submit">Send</button>
+		<div class="class="form-group"">
+      <label for="email">Email address:</label>
+      <input class="form-control" type="email" name="email" placeholder="Your email">
+	  </div>
+	  <div class="class="form-group"">
+      <label for="message">Message:</label>
+      <textarea class="form-control" name="message" placeholder="Your message..."></textarea>
+	  </div><br>
+      <button class="btn btn-primary" type="submit">Send</button>
     </form>
   </div>
 </div>
