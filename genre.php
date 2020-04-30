@@ -28,27 +28,38 @@ $count = mysqli_num_rows($sql);
     }else{
 
       while($genre_results = mysqli_fetch_assoc($sql)){
-        echo "
-
-            <div style='display: inline-block;'  class='card card-body d-inline-flex p-2'>
-              <center><a href='movie.php?id=".$genre_results['url']."'><img width='182' height='268' src='".$genre_results['img']."' class='rounded'><br><b>".$genre_results['title']." (".$genre_results['release_yr'].")</b></a></center>
-            </div>
-        ";
+		  
+	
+	
+	echo "
+			
+		
+			<div  class='card-group d-inline-flex position-relative p-3 ' >
+				<a href='movie.php?id=".$genre_results['url']."' >
+					<div class='row col-sm bg-white shadow rounded' style='height: 268px; width: 200px;'>
+						<img  class='card-img-top rounded img-fluid'  src='".$genre_results['img']."'  />
+							<div class='card-img-overlay' >
+								<h4>".$genre_results['title']." (".$genre_results['release_yr'].")</h4>
+								<p class='card-text text-left '  ><small>".mb_strimwidth($genre_results['descri'], 0, 75, '...')."</small></p>
+							</div>
+					</div>
+				</a>
+			</div>
+    ";
       }
 
-      echo "<br><div class='container text-center'>";
-      $sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table." WHERE genre='$genre')");
-      $row = mysqli_fetch_assoc($sql_page);
-      if($row > 0){
-        $total_pages = ceil($row["total"] / $results_per_page); // calculate total pages with results
+     echo "<div class='container text-center'>";
+$sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table." WHERE genre='$genre'");
+$row = mysqli_fetch_assoc($sql_page);
+$total_pages = ceil($row["total"] / $results_per_page); // calculate total pages with results
 
-        for ($i=1; $i<=$total_pages; $i++) {  // print links for all pages
-                    echo "<b><a class='border px-2 border-warning' href='index.php?page=".$i."'";
-                    if ($i==$page)  echo " class='page-item'";
-                    echo ">".$i."</a>";
-        };
-      }
-      echo "</div></div></center>";
+for ($i=1; $i<=$total_pages; $i++) {  // print links for all pages
+            echo "<b><a class='border px-2 border-warning' href='genre.php?page=".$i."'";
+            if ($i==$page)  echo " class='page-item'";
+            echo ">".$i."</a></b>&nbsp;";
+};
+echo "</div>
+</div></center>";
     }
 
 ?>

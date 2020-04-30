@@ -35,12 +35,26 @@ $count = mysqli_num_rows($sql);
     }else{
 
       while($movie_results = mysqli_fetch_assoc($sql)){
-        echo "
+	
+	
+		echo "
+			
+		
+			<div  class='card-group d-inline-flex position-relative p-3 ' >
+				<a href='movie.php?id=".$movie_results['url']."' >
+					<div class='row col-sm bg-white shadow rounded' style='height: 268px; width: 200px;'>
+						<img  class='card-img-top rounded img-fluid'  src='".$movie_results['img']."'  />
+							<div class='card-img-overlay' >
+								<h4>".$movie_results['title']." (".$movie_results['release_yr'].")</h4>
+								<p class='card-text text-left '  ><small>".mb_strimwidth($movie_results['descri'], 0, 75, '...')."</small></p>
+							</div>
+					</div>
+				</a>
+			</div>
+    ";
 
-            <div style='display: inline-block;'  class='card card-body d-inline-flex p-2'>
-              <center><a href='movie.php?id=".$movie_results['url']."'><img width='182' height='268' src='".$movie_results['img']."' class='rounded'><br><b>".$movie_results['title']." (".$movie_results['release_yr'].")</b></a></center>
-            </div>
-        ";
+	
+	
       }
 
       echo "<br><center><div class='page'>";
