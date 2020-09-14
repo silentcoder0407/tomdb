@@ -4,7 +4,11 @@ include ("nav.php");
 include ("global_variables.php");
 include ("headers.php");
 
-echo "<center><div class='container bg-secondary text-white'>";
+echo "
+  <div class='container text-light bg-dark pt-3 pb-3 text-white'>
+    <h1 align='left'>Results</h1>
+  </div>
+<center><div class='container bg-secondary text-white'>";
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 $start_from = ($page-1) * $results_per_page;
 $movie_keyword = $_GET['movie_keyword'];
@@ -20,7 +24,7 @@ $count = mysqli_num_rows($sql);
   </button>
   </div>";
   }else{
-    echo "<div class='alert alert-success fade in alert-dismissible show'>$count movie(s) found.
+    echo "<div class='pt-3 alert alert-success fade in alert-dismissible show'>$count movie(s) found.
 	<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
     <span aria-hidden='true' style='font-size:20px'>×</span>
   </button>
@@ -42,9 +46,9 @@ $count = mysqli_num_rows($sql);
 		
 			<div  class='card-group d-inline-flex position-relative p-3 ' >
 				<a href='movie.php?id=".$movie_results['url']."' >
-					<div class='row col-sm bg-white shadow rounded' style='height: 268px; width: 200px;'>
-						<img  class='card-img-top rounded img-fluid'  src='".$movie_results['img']."'  />
-							<div class='card-img-overlay' >
+					<div class='row col-sm bg-secodary shadow rounded' >
+						<img  class='card-img-top rounded img-fluid' style='height: 268px; width: 200px;' src='".$movie_results['img']."'  />
+							<div class='card-img-overlay  btn-outline-secondary' >
 								<h4>".$movie_results['title']." (".$movie_results['release_yr'].")</h4>
 								<p class='card-text text-left '  ><small>".mb_strimwidth($movie_results['descri'], 0, 75, '...')."</small></p>
 							</div>
@@ -57,13 +61,13 @@ $count = mysqli_num_rows($sql);
 	
       }
 
-      echo "<br><center><div class='page'>";
+      echo "<br></div><div class='container bg-dark'><center><div class='container text-center pb-2 pt-2'>";
       $sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table." WHERE (`title` LIKE '%".$movie_keyword."%') OR (`url` LIKE '%".$movie_keyword."%') OR (`img` LIKE '%".$movie_keyword."%')");
       $row = mysqli_fetch_assoc($sql_page);
       $total_pages = ceil($row["total"] / $results_per_page); // calculate total pages with results
 
       for ($i=1; $i<=$total_pages; $i++) {  // print links for all pages
-                  echo "<b><a class='border px-2 border-warning' href='index.php?page=".$i."'";
+                  echo "<b><a class='btn btn-warning font-weight-bold' href='index.php?page=".$i."'";
                   if ($i==$page)  echo " class='page-item'";
                   echo ">".$i."</a></b>";
       };

@@ -1,10 +1,10 @@
 <?php
-error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
+
 // Create connection
-$conn = new mysqli("localhost","root","","db_movie");
-//$conn = new mysqli("localhost","id13211271_user_lorence","04072020Ldl!","id13211271_db_ldlexpress");
+$conn = new mysqli("localhost","id13360783_root","f3yX7Oouvw&^!tv_","id13360783_db_movie");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 ?>

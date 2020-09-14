@@ -4,16 +4,14 @@ include ("global_variables.php");
 include ("headers.php");
 ?>
 <nav class="container bg-secondary text-white navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a class="navbar-brand" href="index.php"><img src="img/logo.png" class="rounded" style="width:40px;"></a>
+  <a  href="index.php" class="btn btn-warning font-weight-bold">TOMDB</a>
+  <!--<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="rounded" style="width:40px;"></a>-->
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navb">
+  <div class="collapse navbar-collapse " id="navb">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">Home</a>
-      </li>
 <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
@@ -29,13 +27,29 @@ include ("headers.php");
       </div>
     </li>
 
-	<li class="nav-item">
-        <a class="nav-link" href="disclaimer.php">Disclaimer</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="disclaimer.php">Disclaimer</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="request.php">Request</a>
+    </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
-      <input class="form-control mr-sm-2" type="text" name="movie_keyword" placeholder="Search <?php echo $g_gtitle;?>...">
-      <input class="btn btn-warning my-2 my-sm-0" value="Search" type="submit">
+      
+
+
+      
+
+
+
+      <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search <?php echo $g_gtitle;?>..." name="movie_keyword">
+        <div class="input-group-prepend">
+          <button class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+      </div>
+
     </form>
   </div>
 </nav>
