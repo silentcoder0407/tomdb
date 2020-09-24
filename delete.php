@@ -2,6 +2,7 @@
 include ("connections.php");
 include ("nav.php");
 include ("global_variables.php");
+include ("headers.php");
 
 $id = $_POST['id'];
 

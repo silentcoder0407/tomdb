@@ -1,7 +1,6 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 include ("global_variables.php");
-include ("headers.php");
 ?>
 <nav class="container bg-secondary text-white navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a  href="index.php" class="btn btn-warning font-weight-bold">TOMDB</a>

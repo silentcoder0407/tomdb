@@ -6,7 +6,7 @@ include("headers.php");
 
 
 echo "
-<title>Home".$g_title."</title>
+<title>Home of the Great Movies".$g_title."</title>
 	<div class='container text-light bg-dark pb-3'>
 		<h1 align='left'>What to watch</h1>
 	</div>

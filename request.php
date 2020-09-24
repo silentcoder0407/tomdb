@@ -7,6 +7,14 @@ echo "<title>Request".$g_title."</title>
 		
 ";
 ?>
+
+<meta property="og:url"                content="http://tomdb.info/request.php" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Request a Movie | TOMDB" />
+<meta property="og:description"        content="Send your movie request here" />
+<meta property="og:image"              content="http://tomdb.info/img/logo.png" />
+
+
 	<div class='container text-light bg-dark pb-3'>
 		<h1 align='left'>Request</h1>
 	</div>

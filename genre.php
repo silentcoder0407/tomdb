@@ -1,5 +1,4 @@
 <?php
-error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 include ("connections.php");
 include ("nav.php");
 include ("global_variables.php");

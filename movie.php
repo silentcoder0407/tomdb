@@ -17,6 +17,7 @@ if($count > 0){
     
 
 echo "
+
   <title>".$result['title']." (".$result['release_yr'].") ".$g_title."</title>
     
   <div>
@@ -28,6 +29,7 @@ echo "
       <small>Released: ".$result['release_yr']." | Genre: ".ucfirst($result['genre'])."  | Rating: ".$result['rating']."</small>
     </div>
 
+    
 
     <div class='container bg-secondary'>
         <div class='media'>
@@ -52,6 +54,12 @@ echo "
         <button class='btn btn-primary  btn-lg mb-2 btn-block' onclick=\"window.location.href = '".$result['download_link']."';\">Download</button>
       </div>
       
+      <meta property='og:title'              content='".$result['title']." (".$result['release_yr'].") ".$g_title."'/>
+      <meta property='og:description'        content='".$result['descri']."' />
+      <meta property='og:image'              content='".$result['img']."' />
+      <meta property='og:url'                content='https://tomdb.info/movie.php?id=$link_to_search' />
+      <meta property='og:type'               content='article' />
+
       <hr>
 
       <div id='fb-root'></div>
