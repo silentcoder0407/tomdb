@@ -1,8 +1,16 @@
 <?php
+ob_start();
+session_start();
 include ("connections.php");
 include ("nav.php");
 include ("global_variables.php");
 include ("headers.php");
+
+
+
+if(!isset($_SESSION['s_username']) || empty($_SESSION['s_password'])){
+	header("location: login.php");
+}
 
 
 
@@ -108,6 +116,7 @@ if(isset($_POST['submit'])){
 
         <input type="submit" class="btn btn-lg btn-warning btn-block font-weight-bold" value="Submit" name="submit">
       </form>
+      <a href="logout.php" class="btn btn-lg btn-danger btn-block font-weight-bold" >Logout</a>
     </div>
   </div>
 </div>

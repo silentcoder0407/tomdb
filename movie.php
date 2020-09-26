@@ -51,7 +51,7 @@ echo "
       </div>
 
       <div class='container mt-3 mb-3'>
-        <button class='btn btn-primary  btn-lg mb-2 btn-block' onclick=\"window.location.href = '".$result['download_link']."';\">Download</button>
+        <button class='btn btn-primary  btn-lg mb-2 btn-block' onclick=\"window.location.href = '".$result['download_link']."';\">Download <span class='badge badge-light'>".$result['notes']."</span></button>
       </div>
       
       <meta property='og:title'              content='".$result['title']." (".$result['release_yr'].") ".$g_title."'/>

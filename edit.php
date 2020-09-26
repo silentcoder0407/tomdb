@@ -1,8 +1,14 @@
 <?php
+ob_start();
+session_start();
 include ("connections.php");
 include ("nav.php");
 include ("global_variables.php");
 include ("headers.php");
+
+if(!isset($_SESSION['s_username']) || empty($_SESSION['s_password'])){
+	header("location: login.php");
+}
 
 $url = date("Ymdhis");
 $id = $_POST['id'];
@@ -19,6 +25,10 @@ $notes = $_POST['notes'];
 
 
 
+
+
+
+
 //update
 if(isset($_POST['update'])){	
 $sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', title='$title', release_yr='$release_yr', rating='$rating', genre='$genre', casts='$casts', descri='$descri', download_link='$download_link', notes='$notes' WHERE url = '$id'");
@@ -28,6 +38,10 @@ $sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', t
         </button>
         </div></center>';
 
+}
+
+if(isset($_POST['logout'])){
+  header("location: login.php");
 }
 
 //search
@@ -148,6 +162,7 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
 
         <input type="submit" class="btn btn-lg btn-warning btn-block font-weight-bold" value="Update" name="update">
       </form>
+      <a href="logout.php" class="btn btn-lg btn-danger btn-block font-weight-bold" >Logout</a>
     </div>
   </div>
 </div>

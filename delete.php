@@ -1,8 +1,15 @@
 <?php
+ob_start();
+session_start();
 include ("connections.php");
 include ("nav.php");
 include ("global_variables.php");
 include ("headers.php");
+
+
+if(!isset($_SESSION['s_username']) || empty($_SESSION['s_password'])){
+	header("location: login.php");
+}
 
 $id = $_POST['id'];
 
@@ -34,8 +41,9 @@ $sql = mysqli_query($conn,"DELETE FROM $g_table WHERE url = '$id'");
           <label for="inputID" class="sr-only">ID</label>
           <input type="text" id="inputID" class="form-control" name="id" placeholder="ID" value="<?php echo $id; ?>" aria-label="ID" aria-describedby="basic-addon2" required>
             <div class="input-group-append">
-              <button type="submit" class="btn  btn-warning btn-block font-weight-bold mb-2" name="delete">Delete</button>
+              <button type="submit" class="btn  btn-warning btn-block font-weight-bold mb-2" name="delete">Delete</button>              
             </div>
+            <a href="logout.php" class="btn btn-lg btn-danger btn-block font-weight-bold" >Logout</a>
         </div>
       </form>
     </div>

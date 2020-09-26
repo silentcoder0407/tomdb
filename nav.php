@@ -43,9 +43,9 @@ include ("global_variables.php");
 
 
       <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search <?php echo $g_gtitle;?>..." name="movie_keyword">
+      <input type="text" class="form-control text-light bg-dark" placeholder="Search <?php echo $g_gtitle;?>..." name="movie_keyword">
         <div class="input-group-prepend">
-          <button class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button class="input-group-text bg-dark" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
 
