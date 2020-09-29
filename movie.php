@@ -32,11 +32,11 @@ echo "
     
 
     <div class='container bg-secondary'>
-        <div class='media'>
-          <img class='align-self-center mr-3 rounded' style='height: 268px; width: 200px;' src='".$result['img']."' alt='Generic placeholder image'>
-          <div class='media-body'>
+        <div class='media '>
+          <img class='align-self-center mr-3 rounded' style='height: 268px; width: 200px;' src='".$result['img']."' alt='".$result['title']." (".$result['release_yr'].")'>
+          <div class='media-body '>
             <div class='embed-responsive embed-responsive-16by9'>
-              <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/".$result['trailer']."' allowfullscreen></iframe>
+              <iframe class='align-middle align-self-center embed-responsive-item' src='https://www.youtube.com/embed/".$result['trailer']."' allowfullscreen></iframe>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-ob_start();
+ob_start(); 
 include("connections.php");
 include("global_variables.php");
 include("headers.php");

@@ -27,6 +27,7 @@ $ewan = mysqli_query($conn,"SELECT * FROM ".$g_table." ORDER BY id_no DESC LIMIT
 			
 		
 			<div  class='card-group d-inline-flex position-relative p-2' >
+				<img src='img/logo.png' style='position:absolute; top:10px; left:10px;'>
 				<a href='movie.php?id=".$row['url']."' >
 					<div class='row col-sm bg-secondary shadow rounded ' >
 						<img  class='card-img-top rounded img-fluid ' style='height: 268px; width: 200px;'  src='".$row['img']."'  />

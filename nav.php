@@ -3,7 +3,7 @@ error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 include ("global_variables.php");
 ?>
 <nav class="container bg-secondary text-white navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <a  href="index.php" class="btn btn-warning font-weight-bold">TOMDB</a>
+  <a  href="index.php" class="btn btn-warning font-weight-bold" data-toggle="tooltip" data-placement="right" title="Download and enjoy unlimited FREE movies!!!">TOMDB</a>
   <!--<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="rounded" style="width:40px;"></a>-->
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon"></span>
@@ -43,9 +43,9 @@ include ("global_variables.php");
 
 
       <div class="input-group">
-      <input type="text" class="form-control text-light bg-dark" placeholder="Search <?php echo $g_gtitle;?>..." name="movie_keyword">
+      <input type="text" class="text-warning form-control  bg-dark" placeholder="Search <?php echo $g_gtitle;?>..." name="movie_keyword">
         <div class="input-group-prepend">
-          <button class="input-group-text bg-dark" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button class="input-group-text bg-dark" id="basic-addon1"><i class="text-warning fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div>
 
