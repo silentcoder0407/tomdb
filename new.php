@@ -26,6 +26,7 @@ $casts = $_POST['casts'];
 $descri = $_POST['descri'];
 $download_link = $_POST['download_link'];
 $notes = $_POST['notes'];
+$watch = $_POST['watch'];
 
 
 
@@ -111,6 +112,13 @@ if(isset($_POST['submit'])){
           <label for="" class="col-sm-2 col-form-label">Notes</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="notes" placeholder="Notes" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Watch</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="watch" placeholder="Watch" required>
           </div>
         </div>
 

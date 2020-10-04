@@ -51,8 +51,19 @@ echo "
       </div>
 
       <div class='container mt-3 mb-3'>
-        <button class='btn btn-primary  btn-lg mb-2 btn-block' onclick=\"window.location.href = '".$result['download_link']."';\">Download <span class='badge badge-light'>".$result['notes']."</span></button>
-      </div>
+        <button class='btn btn-primary  btn-lg mb-2 btn-block' onclick=\"window.location.href = '".$result['download_link']."';\">Download <span class='badge badge-light'>".$result['notes']."</span></button>		
+      
+	  
+	  <div class='text-center'>
+		<script type='text/javascript' src='https://uprimp.com/bnr.php?section=General&pub=429868&format=728x90&ga=g'></script>
+		<noscript><a class='justify-content-center' href='https://yllix.com/publishers/429868' target='_blank'><img src='//ylx-aff.advertica-cdn.com/pub/728x90.png' style='border:none;margin:0;padding:0;vertical-align:baseline;' alt='ylliX - Online Advertising Network' /></a></noscript>
+	  </div>
+	  
+	<!-- Button trigger modal -->
+	<button type='button' class='btn btn-primary  btn-lg mb-2 btn-block' data-toggle='modal' data-target='#exampleModal'>
+		Watch it online!<span class='badge badge-danger'>NEW</span>
+	</button>
+	</div>
       
       <meta property='og:title'              content='".$result['title']." (".$result['release_yr'].") ".$g_title."'/>
       <meta property='og:description'        content='".$result['descri']."' />
@@ -71,6 +82,30 @@ echo "
 
   </div>
   </div>
+  
+
+<!-- Modal -->
+<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+	<div class='modal-dialog ' role='document'>
+		<div class='modal-content '>
+		  <div class='modal-header'>
+			<h5 class='modal-title' id='exampleModalLabel'>".$result['title']." (".$result['release_yr'].") ".$g_title."</h5>
+			<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+			  <span aria-hidden='true'>&times;</span>
+			</button>
+		  </div>
+		  <div class='modal-body'>
+			<div class='embed-responsive embed-responsive-16by9'>
+				<iframe class='embed-responsive-item' src='".$result['watch']."' allowfullscreen></iframe>
+			</div>
+		  </div>
+		  <div class='modal-footer'>
+			<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+			<button type='button' class='btn btn-primary' onclick=\"window.location.href = '".$result['download_link']."';\">Download</button>
+		  </div>
+		</div>
+	</div>
+</div>
 ";
   }
 }

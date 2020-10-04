@@ -22,6 +22,7 @@ $casts = $_POST['casts'];
 $descri = $_POST['descri'];
 $download_link = $_POST['download_link'];
 $notes = $_POST['notes'];
+$watch = $_POST['watch'];
 
 
 
@@ -31,7 +32,7 @@ $notes = $_POST['notes'];
 
 //update
 if(isset($_POST['update'])){	
-$sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', title='$title', release_yr='$release_yr', rating='$rating', genre='$genre', casts='$casts', descri='$descri', download_link='$download_link', notes='$notes' WHERE url = '$id'");
+$sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', title='$title', release_yr='$release_yr', rating='$rating', genre='$genre', casts='$casts', descri='$descri', download_link='$download_link', notes='$notes', watch='$watch' WHERE url = '$id'");
   echo '<center><div class="alert alert-info fade in alert-dismissible show">' . $id. ' record updated!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true" style="font-size:20px">×</span>
@@ -67,6 +68,7 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
         $db_descri = $row['descri'];
         $db_download_link = $row['download_link'];
         $db_notes = $row['notes'];
+        $db_watch = $row['watch'];
     }
   }
 
@@ -157,6 +159,13 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
           <label for="" class="col-sm-2 col-form-label">Notes</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="notes" value="<?php echo $db_notes; ?>" placeholder="Notes" >
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Watch</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="watch" value="<?php echo $db_watch; ?>" placeholder="Watch" >
           </div>
         </div>
 

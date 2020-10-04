@@ -15,6 +15,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<!-- Ylix -->
+<script src="https://cdn-server.top/p/wl.js?pub=429868&ga=g"></script>
 <script>
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();

@@ -17,8 +17,8 @@ echo "<title>Contact Us".$g_title."</title>
 				<h1 class="h3 mb-3 font-weight-normal">Comments / Suggestions / Reactions</h1>
 
 				<div class="form-group">
-				<input type="email" name="_replyto" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required autofocus>
-				<small id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</small>
+					<input type="email" name="_replyto" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required autofocus>
+					<small id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</small>
 				</div>
 
 				<div class="form-group">
@@ -29,4 +29,4 @@ echo "<title>Contact Us".$g_title."</title>
 		</body>
 	</div>
 </div>
-<?php include ("footer.php");?>
+<?php include("footer.php");?>
