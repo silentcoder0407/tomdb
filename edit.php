@@ -21,6 +21,7 @@ $genre= $_POST['genre'];
 $casts = $_POST['casts'];
 $descri = $_POST['descri'];
 $download_link = $_POST['download_link'];
+$alt_link = $_POST['alt_link'];
 $notes = $_POST['notes'];
 $watch = $_POST['watch'];
 
@@ -32,7 +33,7 @@ $watch = $_POST['watch'];
 
 //update
 if(isset($_POST['update'])){	
-$sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', title='$title', release_yr='$release_yr', rating='$rating', genre='$genre', casts='$casts', descri='$descri', download_link='$download_link', notes='$notes', watch='$watch' WHERE url = '$id'");
+$sql = mysqli_query($conn,"UPDATE $g_table SET trailer='$trailer', img='$img', title='$title', release_yr='$release_yr', rating='$rating', genre='$genre', casts='$casts', descri='$descri', download_link='$download_link', alt_link='$alt_link', notes='$notes', watch='$watch' WHERE url = '$id'");
   echo '<center><div class="alert alert-info fade in alert-dismissible show">' . $id. ' record updated!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true" style="font-size:20px">×</span>
@@ -67,6 +68,7 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
         $db_casts = $row['casts'];
         $db_descri = $row['descri'];
         $db_download_link = $row['download_link'];
+        $db_alt_link = $row['alt_link'];
         $db_notes = $row['notes'];
         $db_watch = $row['watch'];
     }
@@ -152,6 +154,13 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
           <label for="" class="col-sm-2 col-form-label">Link</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="download_link" value="<?php echo $db_download_link; ?>" placeholder="Link" >
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Alt Link</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="alt_link" value="<?php echo $db_alt_link; ?>" placeholder="Alt Link" >
           </div>
         </div>
 

@@ -7,19 +7,16 @@ include("headers.php");
 
 echo "
 <title>Home of the Great Movies".$g_title."</title>
-	<div class='container text-light bg-dark pb-3'>
+	<div class='  pb-3'>
 		<h1 align='left'>What to watch</h1>
 	</div>
-<center><div class='container bg-secondary text-white pt-3 pb-3'>
+<center><div class=' bg-dark text-white pt-3 pb-3'>
 ";
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 $start_from = ($page-1) * $results_per_page;
 
 $ewan = mysqli_query($conn,"SELECT * FROM ".$g_table." ORDER BY id_no DESC LIMIT $start_from, ".$results_per_page);
  while($row = mysqli_fetch_assoc($ewan)) {
-	
-	
-	
 	
 	
 	
@@ -45,7 +42,7 @@ $ewan = mysqli_query($conn,"SELECT * FROM ".$g_table." ORDER BY id_no DESC LIMIT
 	
  };
 
-echo "</div><div class='container bg-dark'><div class='container text-center pb-2 pt-2'>";
+echo "</div><div class=' bg-dark'><div class='container text-center pb-2 pt-2'>";
 $sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table."");
 $row = mysqli_fetch_assoc($sql_page);
 $total_pages = ceil($row["total"] / $results_per_page); // calculate total pages with results
@@ -59,7 +56,6 @@ for ($i=1; $i<=$total_pages; $i++) {  // print links for all pages
 echo "
 </div></center>";
 ?>
-
 
 <?php include ("footer.php");?>
 

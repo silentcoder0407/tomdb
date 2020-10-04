@@ -1,8 +1,7 @@
-<div class="container text-warning">
-  <footer class="page-footer font-small blue">
+<div class="bg-secondary text-center  pt-5 pb-3">
+  <footer class="page-footer font-small ">
     <div class="row">
-      <div class="col footer-copyright text-left py-3"><small><p>Disclaimer: This site doesn't store any videos on it's server. All videos are provided by third-parties.</small></p></div>
-      <div class="col footer-copyright text-right py-3">&copy;&nbsp;<?php echo date("Y") ." ". $g_gtitle;?></div>
+      <div class="col footer-copyright text-center small text-white"><a class=" text-white" href="donate.php">Donate</a>&nbsp;<a class="text-white " href="disclaimer.php">Disclaimer</a>&nbsp;&copy;&nbsp;<?php echo date("Y");?> tomdb. All Rights Reserved.</div>
     </div>
   </footer>
 </div>

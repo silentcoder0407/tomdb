@@ -6,10 +6,10 @@ echo "<title>Contact Us".$g_title."</title>
 		
 ";
 ?>
-	<div class='container text-light bg-dark pb-3'>
+	<div class='p-3'>
 		<h1 align='left'>Contact Us</h1>
 	</div>
-<div class='container bg-secondary text-white pt-3 pb-3'>
+<div class=' bg-dark text-white pt-3 pb-3'>
 	<img class="mb-4" src="img/logo.png" alt="" width="72" height="72">	
 	<div class="container bg-dark rounded pb-2 pt-2 ">
 		<body class="text-center">

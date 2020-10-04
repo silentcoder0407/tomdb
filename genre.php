@@ -7,10 +7,10 @@ include ("headers.php");
 
 echo "
 <title>Search results ".$g_title."</title>
-	<div class='container text-light bg-dark pb-3'>
+	<div class=' p-3'>
     	<h1 align='left'>".ucfirst($_REQUEST['genre'])."</h1>
   	</div>
-<center><div class='container bg-secondary text-white pb-3'>
+<center><div class=' bg-dark text-white pb-3'>
 <br>
 
 ";
@@ -49,7 +49,7 @@ $count = mysqli_num_rows($sql);
 			</div>
     ";
       }
-     echo "</div><div class='container bg-dark'><div class='container text-center pb-2 pt-2'>";
+     echo "</div><div class=' bg-dark'><div class='container text-center pb-2 pt-2'>";
 $sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table." WHERE genre='$genre'");
 $row = mysqli_fetch_assoc($sql_page);
 $total_pages = ceil($row["total"] / $results_per_page); // calculate total pages with results

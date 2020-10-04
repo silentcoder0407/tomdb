@@ -15,10 +15,10 @@ echo "<title>Request".$g_title."</title>
 <meta property="og:image"              content="http://tomdb.info/img/logo.png" />
 
 
-	<div class='container text-light bg-dark pb-3'>
+	<div class='p-3'>
 		<h1 align='left'>Request</h1>
 	</div>
-<div class='container bg-secondary text-white pt-3 pb-3'>
+<div class=' bg-dark text-white pt-3 pb-3'>
 	<img class="mb-4" src="img/logo.png" alt="" width="72" height="72">	
 	<div class="container bg-dark rounded pb-2 pt-2 ">
 		<body class="text-center">

@@ -2,10 +2,10 @@
 error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 include ("global_variables.php");
 ?>
-<nav class="container bg-secondary text-white navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class=" bg-white text-secondary navbar navbar-expand-lg navbar-white  ">
   <a  href="index.php" class="btn btn-warning font-weight-bold" data-toggle="tooltip" data-placement="right" title="Download and enjoy unlimited FREE movies!!!">TOMDB</a>
   <!--<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="rounded" style="width:40px;"></a>-->
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+  <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -26,9 +26,6 @@ include ("global_variables.php");
       </div>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="disclaimer.php">Disclaimer</a>
-    </li>
 
     <li class="nav-item">
       <a class="nav-link" href="request.php">Request</a>

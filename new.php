@@ -25,6 +25,7 @@ $genre= $_POST['genre'];
 $casts = $_POST['casts'];
 $descri = $_POST['descri'];
 $download_link = $_POST['download_link'];
+$alt_link = $_POST['alt_link'];
 $notes = $_POST['notes'];
 $watch = $_POST['watch'];
 
@@ -32,7 +33,7 @@ $watch = $_POST['watch'];
 
 
 if(isset($_POST['submit'])){
-  $sql = mysqli_query($conn,"INSERT INTO $g_table (url, trailer, img, title, release_yr, rating, genre, casts, descri, download_link, notes) VALUES('$url', '$trailer', '$img', '$title', '$release_yr', '$rating', '$genre', '$casts', '$descri', '$download_link', '$notes')");
+  $sql = mysqli_query($conn,"INSERT INTO $g_table (url, trailer, img, title, release_yr, rating, genre, casts, descri, download_link, alt_link, notes, watch) VALUES('$url', '$trailer', '$img', '$title', '$release_yr', '$rating', '$genre', '$casts', '$descri', '$download_link' , '$alt_link', '$notes', '$watch')");
 }
 
 ?>
@@ -105,6 +106,13 @@ if(isset($_POST['submit'])){
           <label for="" class="col-sm-2 col-form-label">Link</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="download_link" placeholder="Link" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="" class="col-sm-2 col-form-label">Link</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="alt_link" placeholder="Alternate Link" required>
           </div>
         </div>
 

@@ -13,7 +13,7 @@ global $g_earn;
 
 $g_gtitle = "TOMDB";
 $g_title = " | ".$g_gtitle;
-$g_tagline = "Freedom to watch!";
+$g_tagline = "Watch and Download FREE Movies!";
 $g_logo = "img/logo.png";
 $g_date_time = date("Y-m-d h:i:s");
 $results_per_page = 10;
