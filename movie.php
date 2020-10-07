@@ -35,6 +35,7 @@ if($count > 0){
 <meta property="og:url"                content="https://tomdb.info/movie.php?id=<?php echo $link_to_search;?>" />
 <meta property="og:type"               content="article" />
 
+
 <div class="bg-dark ">
   <div class="row">
     <div class="col-sm">
@@ -54,7 +55,7 @@ if($count > 0){
     </div>
     
     <div class="col-sm text-right text-light pt-2 pb-3">
-      <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Trailer</a>&nbsp;<a class="btn btn-primary" href="<?php echo $db_dllink;?>" target="_blank">Download</a>&nbsp;<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://tomdb.info/movie.php?id=<?php echo $link_to_search;?>" target="_blank">Share</a>
+      <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-youtube-play" aria-hidden="true"></i> Trailer</a>&nbsp;<a class="btn btn-primary" href="<?php echo $db_dllink;?>" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a>&nbsp;<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://tomdb.info/movie.php?id=<?php echo $link_to_search;?>" target="_blank"><i class="fa fa-share-alt" aria-hidden="true"></i> Share</a>
     </div>
   </div>
 
