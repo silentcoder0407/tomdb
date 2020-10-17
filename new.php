@@ -29,7 +29,9 @@ $alt_link = $_POST['alt_link'];
 $notes = $_POST['notes'];
 $watch = $_POST['watch'];
 
-
+if(isset($_POST['clear'])){
+  $_POST['trailer'] = "";
+}
 
 
 if(isset($_POST['submit'])){
@@ -37,19 +39,21 @@ if(isset($_POST['submit'])){
 }
 
 ?>
+
+
 <title>New <?php echo $g_title;?></title>
-<div class='container text-light bg-dark pb-3'>
+<div class='p-3'>
   <h1 align='left'>New</h1>
 </div>
 
-<div class="container bg-secondary text-white pb-2 pt-2">
+<div class=" bg-dark text-white pb-2 pt-2">
   <div class="container rounded bg-dark p-3">
     <div class="form">
       <form method="POST" action="new.php">
         <div class="form-group row">
           <label for="" class="col-sm-2 col-form-label">Trailer</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="trailer" placeholder="Trailer" required>
+            <input type="text" class="form-control" id="trailer" name="trailer" placeholder="Trailer" required>
           </div>
         </div>
 
@@ -119,7 +123,7 @@ if(isset($_POST['submit'])){
         <div class="form-group row">
           <label for="" class="col-sm-2 col-form-label">Notes</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="notes" placeholder="Notes" required>
+            <input type="text" value="https://dl.tomdb.xyz/thankyou" class="form-control" name="notes" placeholder="Notes" required>
           </div>
         </div>
 
@@ -130,10 +134,17 @@ if(isset($_POST['submit'])){
           </div>
         </div>
 
-        <input type="submit" class="btn btn-lg btn-warning btn-block font-weight-bold" value="Submit" name="submit">
+        <input type="submit" class="btn btn-lg btn-warning btn-block font-weight-bold" value="Submit" name="submit"><br>
+        
       </form>
+      <button onclick="clear()" class="btn btn-lg btn-success btn-block font-weight-bold" >Clear</button>
       <a href="logout.php" class="btn btn-lg btn-danger btn-block font-weight-bold" >Logout</a>
     </div>
   </div>
 </div>
+<script>
+function clear() {
+  document.getElementById("trailer").value = "";
+}
+</script>
 <?php include("footer.php");?>

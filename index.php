@@ -6,7 +6,8 @@ include("headers.php");
 include("carousel.php");
 ?>
 
-<title>Home of the Great Movies<?php echo $g_title;?></title>
+
+<title>Stream and Download Free Movies<?php echo $g_title;?></title>
 	<div class='bg-dark text-white p-3'>
 		<h1 align='left'>What to watch</h1>
 	</div>
@@ -20,15 +21,24 @@ $ewan = mysqli_query($conn,"SELECT * FROM $g_table ORDER BY id_no DESC LIMIT $st
 ?>		
 	
 			
-		
-			<div  class='d-inline-flex position-relative m-2 shadow' >
-				<a href='movie.php?id=<?php echo $row['url'];?>' >
-						<img  class='row col-sm  rounded img-fluid ' style='height: 268px; width: 258px;'  src='<?php echo $row['img'];?>'  />
-							<div class='text-warning m-2 ' >
-								<small><strong><?php echo $row['title'];?> (<?php echo $row['release_yr'];?>)</strong></small>
+			<?php 
+			 $mtitle = $row['title'] .' ('. $row['release_yr'] . ')';
+			?>
+			<div  class='d-inline-flex  shadow m-2 bg-primary rounded ' >
+				<div>
+					<a class="" href='movie.php?id=<?php echo $row['url'];?>' >
+						<div class="text-right p-1"><i class=" text-warning fa fa-star" aria-hidden="true"> <strong><?php echo $row['rating'];?></strong></i></div> 
+						<div class="text-center " >
+							<div class="p-1"><img  class='rounded shadow' style='height: 268px; width: 230px;'  src='<?php echo $row['img'];?>'  /></div>
+							<div class='m-2'  >
+								<p class="badge badge-pill badge-warning"><?php echo wordwrap($mtitle,30,"<br>\n");?></p>
 							</div>
+						</div>
 					</a>
+				</div>
 			</div>
+
+			
 <?php	
  };
 
@@ -39,7 +49,7 @@ $total_pages = ceil($row["total"] / $results_per_page); // calculate total pages
 
 for ($i=1; $i<=$total_pages; $i++) {  // print links for all pages
 			
-	echo "<b><a class='btn btn-warning font-weight-bold ' href='index.php?page=".$i."'";
+	echo "<b><a class='btn btn-warning  font-weight-bold ' href='index.php?page=".$i."'";
             if ($i==$page)  echo " class='page-item'";
             echo ">".$i."</a></b>&nbsp;";
 };

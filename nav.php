@@ -2,8 +2,8 @@
 error_reporting (E_ALL ^ E_NOTICE); //para no undefined error
 include ("global_variables.php");
 ?>
-<nav class=" bg-white text-secondary navbar navbar-expand-lg navbar-white  ">
-  <a  href="index.php" class="btn btn-warning font-weight-bold" data-toggle="tooltip" data-placement="right" title="">TOMDB</a>
+<nav class=" bg-white text-secondary navbar navbar-expand-lg navbar-white shadow  ">
+  <a  href="index.php" class="btn btn-warning font-weight-bold" data-toggle="tooltip" data-placement="right" title=""><i class="fa fa-play-circle fa-2x" ></i></a>
   <!--<a class="navbar-brand" href="index.php"><img src="img/logo.png" class="rounded" style="width:40px;"></a>-->
   <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon" ></span>

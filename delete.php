@@ -30,11 +30,11 @@ $sql = mysqli_query($conn,"DELETE FROM $g_table WHERE url = '$id'");
 
 ?>
 <title>Delete <?php echo $g_title;?></title>
-<div class='container text-light bg-dark pb-3'>
+<div class='p-3'>
   <h1 align='left'>Delete</h1>
 </div>
-<div class="container bg-secondary text-white pb-2 pt-2">
-  <div class="container shadow rounded bg-dark p-3">
+<div class=" bg-secondary text-white pb-2 pt-2">
+  <div class="container  rounded bg-dark p-3">
     <div class="form">
       <form method="POST" action="delete.php">
         <div class="input-group mb-3">

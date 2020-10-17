@@ -4,11 +4,12 @@
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="icon" type="image/png" href="img/logo.png">
+<!--<link rel="icon" type="image/png" href="img/logo.png">-->
+<link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
 
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-
+<link href="style.css" rel="stylesheet" >
 <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" media="screen">
 <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -38,5 +39,8 @@ $(document).ready(function(){
   fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="ZEHSvAI0"></script>
 
 

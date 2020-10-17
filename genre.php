@@ -29,25 +29,27 @@ $count = mysqli_num_rows($sql);
 	  </div>";
     }else{
 
-      while($genre_results = mysqli_fetch_assoc($sql)){
-		  
+      while($row = mysqli_fetch_assoc($sql)){
+	?>	  
 	
 	
-	echo "
-			
-		
-			<div  class='card-group d-inline-flex position-relative p-2 ' >
-				<a href='movie.php?id=".$genre_results['url']."' >
-					<div class='row col-sm bg-secondary shadow rounded' >
-						<img  class='card-img-top rounded img-fluid shadow' style='height: 268px; width: 200px;' src='".$genre_results['img']."'  />
-							<div class='card-img-overlay  btn-outline-secondary'  >
-								<h4>".$genre_results['title']." (".$genre_results['release_yr'].")</h4>
-								<p class='card-text text-left '  ><small>".mb_strimwidth($genre_results['descri'], 0, 75, '...')."</small></p>
+			<?php 
+			 $mtitle = $row['title'] .' ('. $row['release_yr'] . ')';
+			?>
+			<div  class='d-inline-flex  shadow m-2 bg-primary rounded ' >
+				<div>
+					<a class="" href='movie.php?id=<?php echo $row['url'];?>' >
+						<div class="text-right p-1"><i class=" text-warning fa fa-star" aria-hidden="true"> <strong><?php echo $row['rating'];?></strong></i></div> 
+						<div class="text-center " >
+							<div class="p-1"><img  class='rounded shadow' style='height: 268px; width: 230px;'  src='<?php echo $row['img'];?>'  /></div>
+							<div class='m-2'  >
+								<p class="badge badge-pill badge-warning"><?php echo wordwrap($mtitle,30,"<br>\n");?></p>
 							</div>
-					</div>
-				</a>
+						</div>
+					</a>
+				</div>
 			</div>
-    ";
+	<?php
       }
      echo "</div><div class=' bg-dark'><div class='container text-center pb-2 pt-2'>";
 $sql_page = mysqli_query($conn,"SELECT COUNT(id_no) AS total FROM ".$g_table." WHERE genre='$genre'");

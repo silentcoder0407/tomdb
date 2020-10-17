@@ -78,10 +78,10 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
 
 ?>
 <title>Edit <?php echo $g_title;?></title>
-<div class='container text-light bg-dark pb-3'>
+<div class=' p-3'>
   <h1 align='left'>Edit</h1>
 </div>
-<div class="container bg-secondary text-white pt-2 pb-2 ">
+<div class=" bg-dark text-white pt-2 pb-2 ">
   <div class="container bg-dark rounded p-3">
     <div class="form">
       <form method="POST" action="edit.php">
@@ -167,7 +167,7 @@ $result=mysqli_query($conn,$sql) or die( mysqli_error($conn));
         <div class="form-group row">
           <label for="" class="col-sm-2 col-form-label">Notes</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="notes" value="<?php echo $db_notes; ?>" placeholder="Notes" >
+            <input type="text" value="https://dl.tomdb.xyz/thankyou" class="form-control" name="notes" value="<?php echo $db_notes; ?>" placeholder="Notes" >
           </div>
         </div>
 

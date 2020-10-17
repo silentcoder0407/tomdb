@@ -1,3 +1,10 @@
+<div id="inner_shadow" class="text-white container-fluid pt-4 pb-4 " style=" width:100%; background-image: url('img/catalog-bg.JPG');">
+    <h2 class="">Stream and Download Free Movies</h2>
+    <h5>Browse and Watch all your favorite online movies & download it for free!</h5>
+
+    <div class="fb-like" data-href="https://facebook.com/tomdbinfoofficial" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+
+</div>
 <center>
 <div class="bs-example">
     <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
@@ -12,7 +19,7 @@ $result = mysqli_query($conn,"SELECT * FROM ".$g_table." ");
                 <a href="movie.php?id=<?php echo $row['url'];?>">
                     <img class="d-block w-50  " data-src="holder.js/900x800/auto/#777:#777" style="height: 400px; width: 400px;" alt="First slide image" src="<?php echo $row['img'] ?>"/>
                     <div class="carousel-caption d-none d-md-block">
-                        <a class=" btn btn-warning btn-lg m-3 p-3" href="movie.php?id=<?php echo $row['url'];?>"><i class="fa fa-play-circle" aria-hidden="true"></i> Play</a>
+                        <a class="btn badge-warning m-3 p-3 text-decoration-none font-weight-bold" href="movie.php?id=<?php echo $row['url'];?>"><i class="fa fa-play-circle fa-2x" ></i></a>
                     </div>
                 </a>
             </div>
